@@ -30,11 +30,14 @@ gem 'spring',        group: :development
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
-gem 'unicorn'
+gem 'puma'
+gem 'capistrano3-puma', github: "seuros/capistrano-puma"
 
 # Use Capistrano for deployment
 gem 'capistrano-rails', group: :development
 gem 'sepastian-capistrano3-unicorn', :require => false, group: :development
+gem 'capistrano-bundler', group: :development
+# gem 'capistrano-rbenv', group: :development
 
 # Use debugger
 gem 'debugger', group: [:development, :test]
