@@ -60,7 +60,7 @@ namespace :setup do
       execute "mkdir -p #{shared_path}/config/nginx"
       execute "mkdir -p #{shared_path}/config/puma"
       upload! "config/deploy/nginx/#{fetch(:stage)}.conf", "#{shared_path}/config/nginx/#{fetch(:stage)}.conf"
-      upload! "config/deploy/puma/#{fetch(:stage)}.rb", "#{shared_path}/config/puma/#{fetch(:stage)}.rb"
+      upload! "config/deploy/puma/#{fetch(:stage)}.rb", "#{shared_path}/config/puma.rb"
       upload! "config/deploy/database.yml.example", "#{shared_path}/config/database.yml"
       sudo "ln -nfs #{shared_path}/config/nginx/#{fetch(:stage)}.conf /etc/nginx/sites-enabled/#{fetch(:application)}_#{fetch(:stage)}.conf"
       puts "Now edit the config files in #{shared_path}."
