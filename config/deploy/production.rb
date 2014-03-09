@@ -1,5 +1,5 @@
-set :rails_env, :production
 set :stage, :production
+set :rails_env, "production"
 set :branch, "master"
 
 # used in case we're deploying multiple versions of the same
