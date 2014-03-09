@@ -2,9 +2,16 @@
 # instead read the configuration from the environment.
 #
 # Example:
-#   postgres://myuser:mypass@localhost/somedatabase
+#   postgresql://foo:bar@localhost:9000/foo_test?pool=5&timeout=3000
 #
+#   url: <%= ENV["PRODUCTION_DATABASE_URL"] %>
 staging:
   url: <%= ENV["STAGING_DATABASE_URL"] %>
 production:
-  url: <%= ENV["PRODUCTION_DATABASE_URL"] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: zom_production
+  username: ubuntu
+  password: fnkfynbc
+  host: localhost
