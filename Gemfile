@@ -34,9 +34,9 @@ gem 'puma'
 gem 'capistrano3-puma', github: "seuros/capistrano-puma"
 
 # Use Capistrano for deployment
-gem 'capistrano-rails', group: :development
-gem 'sepastian-capistrano3-unicorn', :require => false, group: :development
-gem 'capistrano-bundler', group: :development
+gem 'capistrano-rails', github: 'capistrano/rails', group: :development
+# gem 'sepastian-capistrano3-unicorn', :require => false, group: :development
+gem 'capistrano-bundler', github: 'capistrano/bundler', group: :development
 # gem 'capistrano-rbenv', group: :development
 
 # Use debugger
