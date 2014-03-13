@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.0.rc1'
 # Use postgresql as the database for Active Record
 gem 'pg'
+gem 'geocoder', github: 'alexreisner/geocoder'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.1'
 # Use Uglifier as compressor for JavaScript assets
@@ -41,4 +42,7 @@ gem 'capistrano-bundler', github: 'capistrano/bundler', group: :development
 
 # Use debugger
 gem 'debugger', group: [:development, :test]
+gem 'rspec-rails', github: 'rspec/rspec-rails', group: [:development, :test]
+gem 'factory_girl_rails', github: 'thoughtbot/factory_girl_rails', group: [:development, :test]
+gem 'database_cleaner', '~> 1.1.1', group: [:test]
 
